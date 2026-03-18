@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videography - Sara Truffi Portfolio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #fcfaf5;
+        font-family: Arial, sans-serif;
+        color: #5a3b4d;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        color: #d14f9c;
+        padding: 6px 10px;
+        display: block;
+      }
+
+      nav a:hover {
+        color: #ffb6db;
+      }
+
+      nav a:active {
+        color: #aa2f79;
+      }
+
+      nav a:visited {
+        color: #c6428f;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        min-width: 220px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .dropdown-content li {
+        display: block;
+        margin: 0;
+      }
+
+      .dropdown-content a {
+        padding: 12px 16px;
+        color: #d14f9c;
+        transition: all 0.2s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #eeeeee;
+        color: #ffb6db;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .page-header {
+        text-align: center;
+        padding: 60px 20px 30px;
+      }
+
+      .page-header h1 {
+        font-size: 2.8em;
+        color: #d14f9c;
+        margin-bottom: 15px;
+      }
+
+      .page-header p {
+        font-size: 1.1em;
+        color: #7a5d6d;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .featured-box {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        margin: 40px auto 60px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      }
+
+      .featured-box h2 {
+        text-align: center;
+        color: #d14f9c;
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .project-card {
+        background: #fffafc;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .project-info {
+        padding: 22px;
+      }
+
+      .project-info h3 {
+        color: #c6428f;
+        font-size: 1.4em;
+        margin-bottom: 12px;
+      }
+
+      .project-info p {
+        color: #6d5c67;
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .view-button {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #d14f9c;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-size: 0.95em;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .view-button:hover {
+        background-color: #ebb4d2;
+        color: white;
+      }
+
+      footer {
+        background-color: #d14f9c;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      @media (max-width: 700px) {
+        nav ul li {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .page-header h1 {
+          font-size: 2.2em;
+        }
+
+        .featured-box {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="https://sstruffi.github.io/home.html/">Home</a></li>
+
+          <li class="dropdown">
+            <a href="https://sstruffi.github.io/work.index/">Projects</a>
+            <ul class="dropdown-content">
+              <li><a href="videography.html">Videography</a></li>
+              <li><a href="#">Branding</a></li>
+              <li><a href="#">Web and App</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </li>
+
+          <li><a href="https://sstruffi.github.io/aboutme.html/">About Me</a></li>
+          <li><a href="https://sstruffi.github.io/contactme.html/">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <section class="page-header">
+        <h1>Videography</h1>
+        <p>
+          A selection of film and video projects that reflect my interest in storytelling,
+          visual composition, editing, and creating meaningful audience experiences.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="featured-box">
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="silent-documentary.jpg" alt="Preview image for Silent Documentary project">
+            <div class="project-info">
+              <h3>Silent Documentary</h3>
+              <p>
+                A visual storytelling project that communicates emotion, atmosphere, and narrative
+                without spoken dialogue, relying on composition, pacing, and imagery.
+              </p>
+              <a href="silent-documentary.html" class="view-button">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="audio-documentary.jpg" alt="Preview image for Audio Documentary project">
+            <div class="project-info">
+              <h3>Audio Documentary</h3>
+              <p>
+                A sound-driven documentary project that explores story through voice, ambient sound,
+                and editing to create an immersive listening experience.
+              </p>
+              <a href="audio-documentary.html" class="view-button">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="object-story-film.jpg" alt="Preview image for Object Story Film project">
+            <div class="project-info">
+              <h3>Object Story Film</h3>
+              <p>
+                A short video centered around a meaningful object, using visuals and personal context
+                to express memory, emotion, and connection through film.
+              </p>
+              <a href="object-story-film.html" class="view-button">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>@ 2026 Sara Truffi - All Rights Reserved</footer>
+  </body>
+</html>
