@@ -20,7 +20,7 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 24px;
       }
 
       nav ul {
@@ -36,10 +36,11 @@
       nav a {
         text-decoration: none;
         font-family: "Open Sans", sans-serif;
-        font-size: 18px;
+        font-size: 17px;
         color: #d14f9c;
-        padding: 6px 10px;
+        padding: 8px 10px;
         display: block;
+        transition: color 0.2s ease;
       }
 
       nav a:hover {
@@ -61,8 +62,9 @@
         left: 0;
         background-color: #ffffff;
         min-width: 220px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f0dce8;
         overflow: hidden;
         z-index: 1000;
       }
@@ -73,13 +75,13 @@
       }
 
       .dropdown-content a {
-        padding: 12px 16px;
+        padding: 13px 16px;
         color: #d14f9c;
         transition: all 0.2s ease;
       }
 
       .dropdown-content a:hover {
-        background-color: #eeeeee;
+        background-color: #efefef;
         color: #ffb6db;
       }
 
@@ -89,55 +91,66 @@
 
       .page-header {
         text-align: center;
-        padding: 60px 20px 30px;
+        padding: 80px 20px 40px;
+      }
+
+      .eyebrow {
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #b87aa0;
+        margin-bottom: 14px;
       }
 
       .page-header h1 {
-        font-size: 2.8em;
+        font-size: 3.4em;
         color: #d14f9c;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
+        line-height: 1.1;
       }
 
       .page-header p {
-        font-size: 1.1em;
+        font-size: 1.08em;
         color: #7a5d6d;
-        max-width: 700px;
+        max-width: 720px;
         margin: 0 auto;
-        line-height: 1.6;
+        line-height: 1.8;
       }
 
       .featured-box {
-        background: white;
-        border-radius: 20px;
-        padding: 40px 30px;
-        margin: 40px auto 60px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 24px;
+        padding: 48px 34px;
+        margin: 30px auto 70px;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f1e3ea;
       }
 
       .featured-box h2 {
         text-align: center;
         color: #d14f9c;
         font-size: 2em;
-        margin-bottom: 30px;
+        margin-bottom: 36px;
       }
 
       .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 32px;
       }
 
       .project-card {
         background: #fffafc;
-        border-radius: 18px;
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f3e3eb;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
 
       .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        transform: translateY(-7px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
       }
 
       .project-card img {
@@ -148,45 +161,111 @@
       }
 
       .project-info {
-        padding: 22px;
+        padding: 24px;
       }
 
       .project-info h3 {
         color: #c6428f;
-        font-size: 1.4em;
-        margin-bottom: 12px;
+        font-size: 1.35em;
+        margin-bottom: 10px;
       }
 
       .project-info p {
         color: #6d5c67;
-        font-size: 1em;
-        line-height: 1.6;
-        margin-bottom: 20px;
+        font-size: 0.98em;
+        line-height: 1.7;
+        margin-bottom: 22px;
       }
 
       .view-button {
         display: inline-block;
         text-decoration: none;
-        background-color: #d14f9c;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 30px;
+        background: transparent;
+        color: #c6428f;
+        border: 1.5px solid #d98ab7;
+        padding: 11px 18px;
+        border-radius: 999px;
         font-size: 0.95em;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: all 0.2s ease;
       }
 
       .view-button:hover {
-        background-color: #ebb4d2;
+        background-color: #d14f9c;
         color: white;
+        border-color: #d14f9c;
+      }
+
+      .audio-placeholder {
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #f8ebf3, #fcfaf5);
+        color: #d14f9c;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .audio-placeholder::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(209, 79, 156, 0.08);
+        top: -40px;
+        right: -40px;
+      }
+
+      .audio-placeholder::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 1px;
+        background: repeating-linear-gradient(
+          to right,
+          #d98ab7 0px,
+          #d98ab7 8px,
+          transparent 8px,
+          transparent 14px
+        );
+        bottom: 52px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.8;
+      }
+
+      .audio-tag {
+        font-size: 0.75em;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: #b87aa0;
+        margin-bottom: 10px;
+        z-index: 1;
+      }
+
+      .audio-placeholder h3 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+        z-index: 1;
+      }
+
+      .audio-placeholder p {
+        font-size: 0.95em;
+        opacity: 0.85;
+        z-index: 1;
       }
 
       footer {
         background-color: #d14f9c;
         color: white;
         text-align: center;
-        padding: 20px 0;
-        margin-top: 40px;
+        padding: 22px 0;
+        margin-top: 50px;
         font-family: "Open Sans", sans-serif;
+        font-size: 0.95em;
       }
 
       @media (max-width: 700px) {
@@ -195,8 +274,12 @@
           margin-bottom: 10px;
         }
 
+        .page-header {
+          padding: 50px 10px 30px;
+        }
+
         .page-header h1 {
-          font-size: 2.2em;
+          font-size: 2.4em;
         }
 
         .featured-box {
@@ -230,10 +313,11 @@
 
     <div class="container">
       <section class="page-header">
+        <p class="eyebrow">Selected Work</p>
         <h1>Videography</h1>
         <p>
-          A selection of film and video projects that reflect my interest in storytelling,
-          visual composition, editing, and creating meaningful audience experiences.
+          A curated selection of film and video projects exploring storytelling,
+          atmosphere, editing, and audience experience through visual and sound-based media.
         </p>
       </section>
     </div>
@@ -248,20 +332,24 @@
             <div class="project-info">
               <h3>Silent Documentary</h3>
               <p>
-                A visual storytelling project that communicates emotion, atmosphere, and narrative
-                without spoken dialogue, relying on composition, pacing, and imagery.
+                A visual storytelling project that communicates atmosphere and narrative
+                without dialogue, using composition, pacing, and imagery to guide the viewer.
               </p>
               <a href="silent-documentary.html" class="view-button">View Project</a>
             </div>
           </div>
 
           <div class="project-card">
-            <img src="audio-documentary.jpg" alt="Preview image for Audio Documentary project">
+            <div class="audio-placeholder">
+              <p class="audio-tag">Audio Project</p>
+              <h3>Audio Documentary</h3>
+              <p>The Ice Keeps Calling</p>
+            </div>
             <div class="project-info">
               <h3>Audio Documentary</h3>
               <p>
-                A sound-driven documentary project that explores story through voice, ambient sound,
-                and editing to create an immersive listening experience.
+                A sound-driven documentary project that explores story through voice,
+                ambient audio, and editing to create an immersive listening experience.
               </p>
               <a href="audio-documentary.html" class="view-button">View Project</a>
             </div>
@@ -272,8 +360,8 @@
             <div class="project-info">
               <h3>Object Story Film</h3>
               <p>
-                A short video centered around a meaningful object, using visuals and personal context
-                to express memory, emotion, and connection through film.
+                A short film centered around a meaningful object, using visuals and
+                personal context to express memory, emotion, and connection.
               </p>
               <a href="object-story-film.html" class="view-button">View Project</a>
             </div>
